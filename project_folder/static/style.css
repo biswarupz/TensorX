@@ -1,0 +1,160 @@
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+* {
+    margin: 0px;
+}
+
+.header {
+    width: 100%;
+    height: 70px;
+    background-color: #ffffff;
+    border: none;
+    border-bottom: 0.5px solid rgb(76, 76, 76);
+    border-right: 0.5px solid rgb(76, 76, 76);
+}
+
+.logo_text {
+    position: absolute;
+    color: #172d05;
+    font-family: sans-serif;
+    font-weight: 120;
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-left: 100px;
+    margin-top: 18px;
+}
+
+.logo_img {
+    height: 60px;
+    display: inline-block;
+    position: absolute;
+    margin-left: 30px;
+    margin-top: 6.5px;
+    animation: rotation 8s infinite linear;
+}
+
+.deepl {
+    height: 150px;
+    margin-top: 30px;
+    margin-left: 145px;
+    border-radius: 30px;
+}
+
+.card1 {
+    height: 590px;
+    width: 30%;
+    background-color: rgb(228, 118, 0);
+    margin-left: 30px;
+    margin-top: 0px;
+    border-radius: 20px;
+    margin-top: 30px;
+    display: inline-block;
+}
+
+.ind {
+    height: 65px;
+    margin-left: 1300px;
+    margin-top: 2.5px;
+}
+
+.card2 {
+    height: 590px;
+    width: 62.5%;
+    background-color: rgb(92, 158, 0);
+    display: inline-block;
+    margin-top: 30px;
+    position: absolute;
+    border-radius: 20px;
+    margin-left: 50px;
+}
+
+.form_h1 {
+    color: white;
+    margin-left: 240px;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form {
+    max-width: 400px;
+    margin-top:50px;
+    margin-left: 230px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    display: block;
+    color: rgb(32, 32, 32);
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type="text"],
+input[type="url"], /* Added input[type="url"] styling */
+input[type="file"] {
+    width: 350px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #6f5151;
+    border-radius: 3px;
+}
+
+input[type="file"] {
+    border: none;
+    background-color: #f5f5f5;
+}
+
+input[type="file"]:focus {
+    outline: none;
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.form11 {
+    width: 375px;
+    margin-top: 70px;
+}
+
+.namaste {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+/* Add this to your CSS */
+.hidden {
+    display: none;
+}
+
+
+#notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}

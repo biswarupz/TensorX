@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neuro Bharat</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logo_holder">
+            <img src="{{ url_for('static', filename='logo.jpg') }}" alt="logO" class="logo_img">
+            <h4 class="logo_text">Neuro Bharat</h4>
+            <img src="{{ url_for('static', filename='ind.png') }}" class="ind">
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card1">
+            <img src="{{ url_for('static', filename='deepl.jpg') }}" class="deepl">
+            <h3 class="namaste">Namaste! Neuro Bharat helps find cancer early in places where it's hard to get medical help. We use modern tools to discover cancer before it becomes a big problem. Our goal is to make sure that people in faraway areas can get checked for cancer quickly and accurately. This way, they can get the right treatment on time, even if they live far from a hospital. We're using smart ways to bring important healthcare to people who really need it, and that can save lives by catching cancer early.</h3>
+        </div>
+
+        <div class="card2">
+            <h1 class="form_h1">Submit necessary images</h1>
+            <div class="card3">
+                <form action="/submit" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Rakesh Sharma"><br><br>
+
+                <label for="aadhar">Aadhar Number:</label>
+                <input type="text" id="aadhar" name="aadhar" placeholder="123412341234"><br><br>
+
+                <label for="link">Image Link:</label>
+                <input type="url" id="link" name="link" placeholder="https://example.com" required><br><br>
+
+                <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="notification" class="hidden">
+        Request has been sent!
+    </div>
+    
+    <script>
+        const aadharInput = document.getElementById('aadhar');
+
+        aadharInput.addEventListener('input', function () {
+            this.value = this.value.replace(/\D/g, '').slice(0, 12);
+            
+            if (this.value.length < 12) {
+                this.style.color = 'red';
+            } else {
+                this.style.color = 'black';
+            }
+        });
+    </script>
+    <script>
+        // Function to show the notification
+        function showNotification() {
+            const notification = document.getElementById('notification');
+            notification.style.display = 'block';
+    
+            // Hide the notification after 2 seconds (2000 milliseconds)
+            setTimeout(() => {
+                notification.style.display = 'none';
+                const form = document.querySelector('form');
+                form.submit(); // Submit the form after the notification disappears
+            }, 1000);
+        }
+    
+        // Add an event listener to the form submission
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault(); // Prevent the default form submission
+            showNotification(); // Show the notification
+        });
+    </script>
+    
+    
+    
+    
+</body>
+</html>
